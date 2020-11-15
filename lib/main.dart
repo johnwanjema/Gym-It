@@ -127,16 +127,24 @@ class categoryCard extends StatelessWidget {
       padding: EdgeInsets.all(20),
       decoration: BoxDecoration(
           color: Colors.white, borderRadius: BorderRadius.circular(13)),
-      child: Column(
-        children: <Widget>[
-          Spacer(),
-          SvgPicture.asset(svgSrc),
-          Spacer(),
-          Text(title,
-              textAlign: TextAlign.center,
-              style:
-                  Theme.of(context).textTheme.headline6.copyWith(fontSize: 15))
-        ],
+      child: Material(
+        color: Colors.transparent,
+        child: InkWell(
+          onTap: () {},
+          child: Column(
+            children: <Widget>[
+              Spacer(),
+              SvgPicture.asset(svgSrc),
+              Spacer(),
+              Text(title,
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context)
+                      .textTheme
+                      .headline6
+                      .copyWith(fontSize: 15))
+            ],
+          ),
+        ),
       ),
     );
   }
