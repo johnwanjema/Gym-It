@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:the_flutter_way/constants.dart';
+import 'package:the_flutter_way/widgets/bottom_nav_bar.dart';
 import 'package:the_flutter_way/widgets/category_card.dart';
 
 void main() => runApp(MyApp());
@@ -29,6 +30,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size; //give height and width of device
     return Scaffold(
+      bottomNavigationBar: BottomNavBar(),
       body: Stack(
         children: <Widget>[
           Container(
@@ -87,22 +89,22 @@ class HomeScreen extends StatelessWidget {
                         categoryCard(
                           title: 'Diet Recommendation',
                           svgSrc: 'assets/icons/Hamburger.svg',
-                          press: (){},
+                          press: () {},
                         ),
                         categoryCard(
                           title: 'Kegel Exercises',
                           svgSrc: 'assets/icons/Excrecises.svg',
-                          press: (){},
+                          press: () {},
                         ),
                         categoryCard(
                           title: 'Meditation',
                           svgSrc: 'assets/icons/Meditation.svg',
-                          press: (){},
+                          press: () {},
                         ),
                         categoryCard(
                           title: 'Yoga',
                           svgSrc: 'assets/icons/yoga.svg',
-                          press: (){},
+                          press: () {},
                         ),
                       ],
                     ),
@@ -116,5 +118,7 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
+
 
 
