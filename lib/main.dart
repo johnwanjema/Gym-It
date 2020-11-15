@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:the_flutter_way/constants.dart';
+import 'package:the_flutter_way/screens/details_screen.dart';
 import 'package:the_flutter_way/widgets/bottom_nav_bar.dart';
 import 'package:the_flutter_way/widgets/category_card.dart';
 
@@ -99,7 +100,12 @@ class HomeScreen extends StatelessWidget {
                         categoryCard(
                           title: 'Meditation',
                           svgSrc: 'assets/icons/Meditation.svg',
-                          press: () {},
+                          press: () {
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (context) {
+                              return DetailsScreen();
+                            }));
+                          },
                         ),
                         categoryCard(
                           title: 'Yoga',
@@ -118,7 +124,3 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
-
-
-
-
