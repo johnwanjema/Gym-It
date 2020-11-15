@@ -57,7 +57,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    'Good Morning of \n John',
+                    'Good Morning \n John',
                     style: Theme.of(context)
                         .textTheme
                         .headline4
@@ -69,7 +69,6 @@ class HomeScreen extends StatelessWidget {
                     decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(29.5)),
-                    color: Colors.white,
                     child: TextField(
                       decoration: InputDecoration(
                           hintText: "Search",
@@ -77,11 +76,66 @@ class HomeScreen extends StatelessWidget {
                           icon: SvgPicture.asset("assets/icons/search.svg")),
                     ),
                   ),
-                 
+                  Expanded(
+                    child: GridView.count(
+                      crossAxisCount: 2,
+                      childAspectRatio: .85,
+                      crossAxisSpacing: 20,
+                      mainAxisSpacing: 20,
+                      children: <Widget>[
+                        categoryCard(
+                          title: 'Diet Recommendation',
+                          svgSrc: 'assets/icons/Hamburger.svg',
+                        ),
+                        categoryCard(
+                          title: 'Kegel Exercises',
+                          svgSrc: 'assets/icons/Exercises.svg',
+                        ),
+                        categoryCard(
+                          title: 'Meditation',
+                          svgSrc: 'assets/icons/Meditation.svg',
+                        ),
+                        categoryCard(
+                          title: 'Yoga',
+                          svgSrc: 'assets/icons/yoga.svg',
+                        ),
+                      ],
+                    ),
+                  )
                 ],
               ),
             ),
           )
+        ],
+      ),
+    );
+  }
+}
+
+class categoryCard extends StatelessWidget {
+  final String svgSrc;
+  final String title;
+  const categoryCard({
+    Key key,
+    this.svgSrc,
+    this.title,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.all(20),
+      decoration: BoxDecoration(
+          color: Colors.white, borderRadius: BorderRadius.circular(13)),
+      child: Column(
+        children: <Widget>[
+          Spacer(),
+          SvgPicture.asset(svgSrc),
+          Spacer(),
+          Text(title,
+              textAlign: TextAlign.center,
+              style:
+                  Theme.of(context).textTheme.headline6.copyWith(fontSize: 15))
         ],
       ),
     );
