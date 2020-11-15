@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:the_flutter_way/constants.dart';
+import 'package:the_flutter_way/widgets/bottom_nav_bar.dart';
+import 'package:the_flutter_way/widgets/category_card.dart';
 
 void main() => runApp(MyApp());
 
@@ -28,6 +30,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size; //give height and width of device
     return Scaffold(
+      bottomNavigationBar: BottomNavBar(),
       body: Stack(
         children: <Widget>[
           Container(
@@ -86,18 +89,22 @@ class HomeScreen extends StatelessWidget {
                         categoryCard(
                           title: 'Diet Recommendation',
                           svgSrc: 'assets/icons/Hamburger.svg',
+                          press: () {},
                         ),
                         categoryCard(
                           title: 'Kegel Exercises',
-                          svgSrc: 'assets/icons/Exercises.svg',
+                          svgSrc: 'assets/icons/Excrecises.svg',
+                          press: () {},
                         ),
                         categoryCard(
                           title: 'Meditation',
                           svgSrc: 'assets/icons/Meditation.svg',
+                          press: () {},
                         ),
                         categoryCard(
                           title: 'Yoga',
                           svgSrc: 'assets/icons/yoga.svg',
+                          press: () {},
                         ),
                       ],
                     ),
@@ -112,32 +119,6 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-class categoryCard extends StatelessWidget {
-  final String svgSrc;
-  final String title;
-  const categoryCard({
-    Key key,
-    this.svgSrc,
-    this.title,
-  }) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.all(20),
-      decoration: BoxDecoration(
-          color: Colors.white, borderRadius: BorderRadius.circular(13)),
-      child: Column(
-        children: <Widget>[
-          Spacer(),
-          SvgPicture.asset(svgSrc),
-          Spacer(),
-          Text(title,
-              textAlign: TextAlign.center,
-              style:
-                  Theme.of(context).textTheme.headline6.copyWith(fontSize: 15))
-        ],
-      ),
-    );
-  }
-}
+
+
