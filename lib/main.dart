@@ -5,6 +5,7 @@ import 'package:the_flutter_way/constants.dart';
 import 'package:the_flutter_way/screens/details_screen.dart';
 import 'package:the_flutter_way/widgets/bottom_nav_bar.dart';
 import 'package:the_flutter_way/widgets/category_card.dart';
+import 'package:the_flutter_way/widgets/search_bar.dart';
 
 void main() => runApp(MyApp());
 
@@ -67,19 +68,7 @@ class HomeScreen extends StatelessWidget {
                         .headline4
                         .copyWith(fontWeight: FontWeight.w900),
                   ),
-                  Container(
-                    margin: EdgeInsets.symmetric(vertical: 38),
-                    padding: EdgeInsets.symmetric(horizontal: 30, vertical: 5),
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(29.5)),
-                    child: TextField(
-                      decoration: InputDecoration(
-                          hintText: "Search",
-                          border: InputBorder.none,
-                          icon: SvgPicture.asset("assets/icons/search.svg")),
-                    ),
-                  ),
+                  SearchBar(),
                   Expanded(
                     child: GridView.count(
                       crossAxisCount: 2,
@@ -124,3 +113,5 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
+
