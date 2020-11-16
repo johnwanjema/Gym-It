@@ -45,8 +45,11 @@ class DetailsScreen extends StatelessWidget {
                   SizedBox(
                       width: size.width * .6,
                       child: Text(
-                          'Live happier and healthier through meditation'))
-                  ,SearchBar(),
+                          'Live happier and healthier through meditation')),
+                  SizedBox(
+                      width: size.width * .6,
+                      child: SearchBar()
+                  ),
                 ],
               ),
             ),
