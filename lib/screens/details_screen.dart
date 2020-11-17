@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:the_flutter_way/constants.dart';
+import 'package:the_flutter_way/widgets/bottom_nav_bar.dart';
 import 'package:the_flutter_way/widgets/search_bar.dart';
 import 'package:the_flutter_way/widgets/session_card.dart';
 
@@ -9,6 +10,7 @@ class DetailsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size; //give height and width of device
     return Scaffold(
+      bottomNavigationBar: BottomNavBar(),
       body: Stack(
         children: <Widget>[
           Container(
@@ -35,14 +37,14 @@ class DetailsScreen extends StatelessWidget {
                         .copyWith(fontWeight: FontWeight.w900),
                   ),
                   SizedBox(
-                    height: 10,
+                    height: 5,
                   ),
                   Text(
                     '3-10 MIN Course',
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                   SizedBox(
-                    height: 10,
+                    height: 5,
                   ),
                   SizedBox(
                       width: size.width * .6,
@@ -67,7 +69,7 @@ class DetailsScreen extends StatelessWidget {
                     ],
                   ),
                   SizedBox(
-                    height: 10,
+                    height: 2,
                   ),
                   Text(
                     'Meditation',
@@ -77,7 +79,7 @@ class DetailsScreen extends StatelessWidget {
                         .copyWith(fontWeight: FontWeight.bold),
                   ),
                   Container(
-                    margin: EdgeInsets.symmetric(vertical: 20),
+                    margin: EdgeInsets.symmetric(vertical: 10),
                     padding: EdgeInsets.all(10),
                     height: 90,
                     decoration: BoxDecoration(
