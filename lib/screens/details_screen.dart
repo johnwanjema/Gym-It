@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:the_flutter_way/constants.dart';
 import 'package:the_flutter_way/widgets/search_bar.dart';
+import 'package:the_flutter_way/widgets/session_card.dart';
 
 class DetailsScreen extends StatelessWidget {
   @override
@@ -46,10 +47,25 @@ class DetailsScreen extends StatelessWidget {
                       width: size.width * .6,
                       child: Text(
                           'Live happier and healthier through meditation')),
-                  SizedBox(
-                      width: size.width * .6,
-                      child: SearchBar()
+                  SizedBox(width: size.width * .6, child: SearchBar()),
+                  Wrap(
+                    spacing: 20,
+                    runSpacing: 30,
+                    children: <Widget>[
+                      SessionCard(
+                        sessionNum: 01,
+                        isDone: true,
+                        press: () {},
+                      ),
+                      SessionCard(sessionNum: 02, press: () {}),
+                      SessionCard(sessionNum: 03, press: () {}),
+                      SessionCard(sessionNum: 04, press: () {}),
+                      SessionCard(sessionNum: 05, press: () {}),
+                      SessionCard(sessionNum: 06, press: () {}),
+                      // SessionCard(),
+                    ],
                   ),
+
                 ],
               ),
             ),
@@ -59,3 +75,5 @@ class DetailsScreen extends StatelessWidget {
     );
   }
 }
+
+
