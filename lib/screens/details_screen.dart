@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:the_flutter_way/constants.dart';
 import 'package:the_flutter_way/widgets/search_bar.dart';
 import 'package:the_flutter_way/widgets/session_card.dart';
@@ -50,7 +51,7 @@ class DetailsScreen extends StatelessWidget {
                   SizedBox(width: size.width * .6, child: SearchBar()),
                   Wrap(
                     spacing: 20,
-                    runSpacing: 30,
+                    runSpacing: 10,
                     children: <Widget>[
                       SessionCard(
                         sessionNum: 01,
@@ -65,7 +66,57 @@ class DetailsScreen extends StatelessWidget {
                       // SessionCard(),
                     ],
                   ),
-
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    'Meditation',
+                    style: Theme.of(context)
+                        .textTheme
+                        .headline6
+                        .copyWith(fontWeight: FontWeight.bold),
+                  ),
+                  Container(
+                    margin: EdgeInsets.symmetric(vertical: 20),
+                    padding: EdgeInsets.all(10),
+                    height: 90,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(13),
+                      boxShadow: [
+                        BoxShadow(
+                            offset: Offset(0, 17),
+                            blurRadius: 23,
+                            spreadRadius: -13,
+                            color: kShadowColor)
+                      ],
+                      // image:
+                    ),
+                    child: Row(
+                      children: <Widget>[
+                        SvgPicture.asset(
+                            'assets/icons/Meditation_women_small.svg'),
+                        SizedBox(width: 20,),
+                        Expanded(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            crossAxisAlignment : CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Text(
+                                'Basic 2',
+                                style: Theme.of(context).textTheme.subtitle2,
+                              ),
+                              Text('Start your practice'),
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.all(10),
+                          child: SvgPicture.asset('assets/icons/Lock.svg'),
+                        )
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -75,5 +126,3 @@ class DetailsScreen extends StatelessWidget {
     );
   }
 }
-
-
