@@ -12,5 +12,5 @@ John Wanjema
 }
 
 ## Images
-![Home Screen](/assets/images/home.png =100x20)
+![Home Screen](/assets/images/home.png)
 ![Details Screen](/assets/images/details.png )
