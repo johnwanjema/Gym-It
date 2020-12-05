@@ -3,6 +3,7 @@ import 'package:flutter/painting.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:the_flutter_way/constants.dart';
 import 'package:the_flutter_way/screens/details_screen.dart';
+import 'package:the_flutter_way/screens/upper_body_screen.dart';
 import 'package:the_flutter_way/widgets/bottom_nav_bar.dart';
 import 'package:the_flutter_way/widgets/category_card.dart';
 import 'package:the_flutter_way/widgets/search_bar.dart';
@@ -82,7 +83,7 @@ class HomeScreen extends StatelessWidget {
                           press: () {
                             Navigator.push(context,
                                 MaterialPageRoute(builder: (context) {
-                                  return DetailsScreen(
+                                  return UpperBodyScreen(
                                     title: 'upper Body', description: 'Upper body resistance or strength training has a long list of benefits. It helps you boost muscle strength and endurance in your arms, back, chest, and shoulders.',
                                   );
                                 }));
@@ -92,12 +93,7 @@ class HomeScreen extends StatelessWidget {
                           title: 'Lower Body Workouts',
                           svgSrc: 'assets/icons/Excrecises.svg',
                           press: () {
-                            Navigator.push(context,
-                                MaterialPageRoute(builder: (context) {
-                                  return DetailsScreen(
-                                    title: 'Lower Body',description: 'This lower body and core strength workout includes a variety of exercises targeting the glutes, hips, thighs, abs, and back. ',
-                                  );
-                                }));
+
                           },
                         ),
                       ],
