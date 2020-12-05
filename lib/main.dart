@@ -84,22 +84,26 @@ class HomeScreen extends StatelessWidget {
                           press: () {
                             Navigator.push(context,
                                 MaterialPageRoute(builder: (context) {
-                                  return UpperBodyScreen(
-                                    title: 'upper Body', description: 'Upper body resistance or strength training has a long list of benefits. It helps you boost muscle strength and endurance in your arms, back, chest, and shoulders.',
-                                  );
-                                }));
+                              return UpperBodyScreen(
+                                title: 'upper Body',
+                                description:
+                                    'Upper body resistance or strength training has a long list of benefits. It helps you boost muscle strength and endurance in your arms, back, chest, and shoulders.',
+                              );
+                            }));
                           },
                         ),
                         categoryCard(
                           title: 'Lower Body Workouts',
                           svgSrc: 'assets/icons/Excrecises.svg',
                           press: () {
-                               Navigator.push(context,
+                            Navigator.push(context,
                                 MaterialPageRoute(builder: (context) {
-                                  return LowerBodyScreen(
-                                    title: 'Lower Body', description: 'This lower body and core strength workout includes a variety of exercises targeting the glutes, hips, thighs, abs, and back.',
-                                  );
-                                }));
+                              return LowerBodyScreen(
+                                title: 'Lower Body',
+                                description:
+                                    'This lower body and core strength workout includes a variety of exercises targeting the glutes, hips, thighs, abs, and back.',
+                              );
+                            }));
                           },
                         ),
                       ],
@@ -114,5 +118,3 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
-
-
