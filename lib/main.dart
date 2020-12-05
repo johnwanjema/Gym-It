@@ -62,7 +62,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    'Good Morning \n John',
+                    'Welcome to Gym It',
                     style: Theme.of(context)
                         .textTheme
                         .headline4
@@ -77,29 +77,28 @@ class HomeScreen extends StatelessWidget {
                       mainAxisSpacing: 20,
                       children: <Widget>[
                         categoryCard(
-                          title: 'Diet Recommendation',
+                          title: 'Upper Body Workouts',
                           svgSrc: 'assets/icons/Hamburger.svg',
-                          press: () {},
-                        ),
-                        categoryCard(
-                          title: 'Kegel Exercises',
-                          svgSrc: 'assets/icons/Excrecises.svg',
-                          press: () {},
-                        ),
-                        categoryCard(
-                          title: 'Meditation',
-                          svgSrc: 'assets/icons/Meditation.svg',
                           press: () {
                             Navigator.push(context,
                                 MaterialPageRoute(builder: (context) {
-                              return DetailsScreen();
-                            }));
+                                  return DetailsScreen(
+                                    title: 'upper Body', description: 'Upper body resistance or strength training has a long list of benefits. It helps you boost muscle strength and endurance in your arms, back, chest, and shoulders.',
+                                  );
+                                }));
                           },
                         ),
                         categoryCard(
-                          title: 'Yoga',
-                          svgSrc: 'assets/icons/yoga.svg',
-                          press: () {},
+                          title: 'Lower Body Workouts',
+                          svgSrc: 'assets/icons/Excrecises.svg',
+                          press: () {
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (context) {
+                                  return DetailsScreen(
+                                    title: 'Lower Body',description: 'This lower body and core strength workout includes a variety of exercises targeting the glutes, hips, thighs, abs, and back. ',
+                                  );
+                                }));
+                          },
                         ),
                       ],
                     ),
