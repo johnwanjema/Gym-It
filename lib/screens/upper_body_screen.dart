@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:the_flutter_way/constants.dart';
+import 'package:the_flutter_way/screens/workout_details_screen.dart';
 import 'package:the_flutter_way/widgets/bottom_nav_bar.dart';
 import 'package:the_flutter_way/widgets/search_bar.dart';
 import 'package:the_flutter_way/widgets/session_card.dart';
@@ -56,7 +57,13 @@ class UpperBodyScreen extends StatelessWidget {
                     SizedBox(
                       height: 30,
                     ),
-                    workOutCard(title: 'Arm Exercises', imgUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0leSMFEVcZsykkcVT97p4iodvFycSptWsrw&usqp=CAU',),
+                    workOutCard(title: 'Arm Exercises', imgUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0leSMFEVcZsykkcVT97p4iodvFycSptWsrw&usqp=CAU',
+                      press: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) {
+                              return WorkoutDetails();
+                            }));
+                      },),
                     workOutCard(title: 'Chest Exercises', imgUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTTCYbdMFTkouFvaomI8Auf620Yraqf8YHHQ&usqp=CAU',),
                     workOutCard(title: 'Shoulder Exercises', imgUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqLWC3DGgPsPvC67G9I1lLZ9TxD5vQQ7PEtg&usqp=CAU',),
                     workOutCard(title: 'Back Exercises', imgUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRK0OFkYZCMsqyaeSlJYaV3KnWP8d98qRGWpw&usqp=CAU',),

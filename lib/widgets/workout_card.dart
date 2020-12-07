@@ -5,16 +5,15 @@ import '../constants.dart';
 class workOutCard extends StatelessWidget {
   final String title;
   final String imgUrl;
+  final Function press;
   const workOutCard({
-    Key key, this.title, this.imgUrl,
+    Key key, this.title, this.imgUrl, this.press,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: (){
-        print(title);
-      },
+      onTap: press,
       child: Container(
         margin: EdgeInsets.symmetric(vertical: 10),
         padding: EdgeInsets.all(10),
